@@ -39,7 +39,7 @@
 	<script type="text/javascript">
 	
 	vkBridge.send('VKWebAppInit');
-
+	 vkBridge.send('VKWebAppGetAds');
 
 
       function auth(){
@@ -119,7 +119,7 @@
   const [bannerData, setBannerData] = useState({});
 
   useEffect(() => {
-    bridge.send('VKWebAppGetAds')
+    vkBridge.send('VKWebAppGetAds')
       .then((bannerInfo) => {
         setBannerData(bannerInfo);
       });
